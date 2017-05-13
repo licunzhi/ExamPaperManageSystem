@@ -7,7 +7,7 @@
 <!-- 引入相关的脚本工具 -->
   <link rel="stylesheet" href="bootstrapvalidator-master/vendor/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="bootstrapvalidator-master/dist/css/bootstrapValidator.css"/>
-
+	<link rel="shortcut icon" href="image/ahpu.ico" type="image/x-icon" />
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
@@ -71,7 +71,7 @@ $(function(){
 <title>所有的导航栏的上标题</title>
 </head>
 <body>
-<div class="worddd btn btn-info"><span>试卷管理系统后台系统</span></div>
+<div class="worddd btn btn-info"><span><a href="adminindex.jsp" style="color:white;">试卷管理系统后台系统</a></span></div>
 <div class="containername">
 		<div class="btn-group">
 			<a href="AdminAction_toGetMyUserPaper" class="btn btn-primary" role="button" style="border-radius:20px;">待审核</a>

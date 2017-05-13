@@ -7,7 +7,7 @@
 <!-- 引入相关的脚本工具 -->
  <link rel="stylesheet" href="bootstrapvalidator-master/vendor/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="bootstrapvalidator-master/dist/css/bootstrapValidator.css"/>
-
+	<link rel="shortcut icon" href="image/ahpu.ico" type="image/x-icon" />
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>

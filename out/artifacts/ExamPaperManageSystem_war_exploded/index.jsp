@@ -5,10 +5,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 引入相关的脚本工具 -->
-   <link rel="stylesheet" href="bootstrapvalidator-master/vendor/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="bootstrapvalidator-master/dist/css/bootstrapValidator.css"/>
-
-    <script type="text/javascript" src="bootstrapvalidator-master/vendor/jquery/jquery.min.js"></script>
+	<link rel="stylesheet" href="bootstrapvalidator-master/vendor/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" href="bootstrapvalidator-master/dist/css/bootstrapValidator.css"/>
+	<link rel="shortcut icon" href="image/ahpu.ico" type="image/x-icon" />
+	<script type="text/javascript" src="bootstrapvalidator-master/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
 <script type="text/javascript">
@@ -116,7 +116,7 @@ $(document).ready(function() {
 		<form id="loginform" action="UserAction_doCheckUser" method="post" class="form-horizontal" style="position:absolute; left: 60px;">
 			<fieldset>
 			<div id="" class="form-group">
-				<label for="username" class="control-label">职工号</label>
+				<label for="userid" class="control-label">职工号</label>
 				<input type="text" placeholder="教职工号" name="userid" id="userid" value="3130705121"/>
 			</div>
 			<div class="form-group">
