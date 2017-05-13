@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="true" />
+
+	<package name="examPaperManageSystem" extends="struts-default" namespace="/">
+	
+		<!-- 定义一个自己的拦截器    myinterceptor -->
+	<interceptors>
+		<interceptor name="myinterceptor" class="com.licunzhi.interceptor.MyInterceptor"></interceptor>
+		<!-- 默认的拦截器的名字 -->
+		<interceptor-stack name="mydefault">
+			<interceptor-ref name="myinterceptor">
+			<!-- 过滤一些指定的方法   实现点击指定链接的时候缓存中必须有相应的用户的登陆 -->
+				<param name="excludeMethods">doCheckUser,doLogin</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</interceptor-stack>
+	</interceptors>
+	
+	<default-interceptor-ref name="mydefault"></default-interceptor-ref>
+	
+	
+	<!-- 定义全局结果 -->
+		<global-results>
+			<result name="input">/fail.jsp</result>
+			<result name="toChangeIndexPage">/success.jsp</result>
+			<result name="toUserLoginPage">/index.jsp</result>
+		</global-results>
+	
+	<!-- 管理员Action -->
+		<action name="AdminAction_*" method="{1}" class="adminAction">
+			<result name="adminloginpage">/adminlogin.jsp</result>
+			<result name="adminindex">/adminindex.jsp</result>
+			<result name="addUserPage">/adduser.jsp</result>
+			<result name="toMyUserListPage">/myuserlist.jsp</result>
+			<result name="toMyShouldCheckPaperPage">/myshouldcheckpaper.jsp</result>
+		</action>
+	<!-- 用户Action -->
+		<action name="UserAction_*" method="{1}" class="userAction">
+			<result name="toAddUserAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">AdminAction_toAddUser</param>
+			</result>
+			<result name="toUserLoginAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">UserAction_toUserLogin</param>
+			</result>
+			<result name="toSysIndextPage">/userindex.jsp</result>
+			<result name="toAddUserSuccess">/addusersuccess.jsp</result>
+			<result name="toUserLoginPage">/index.jsp</result>
+			<result name="toAddPaperPage">/addpaper.jsp</result>
+			<result name="toMyUserListAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">AdminAction_toFindAllUser</param>
+			</result>
+			<result name="toModifyUserInfoPage">/addandmodify.jsp</result>
+		</action>
+	<!-- 试卷Action -->
+		<action name="PaperAction_*" method="{1}" class="paperAction">
+			<result name="toAddPaperPage" type="redirect">/addpaper.jsp</result>
+			<result name="toMyNewPaperPage">/myallnewpaper.jsp</result>
+			<result name="toMyTempPaperPage">/mytemppaper.jsp</result>
+			<result name="toMyTrashPaperPage">/mytrashpaper.jsp</result>
+			<result name="toMyTrashPageAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PaperAction_getTrashAllPaper</param>
+			</result>
+			<result name="toGetTempParperListAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PaperAction_getTempAllPaper</param>
+			</result>
+			<result name="toMyAllPaperAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PaperAction_getMyAllPaper</param>
+			</result>
+			<result name="toModifyPaperPageAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PageAction_doFlushPageSession</param>
+			</result>
+			<result name="toShouldPrintPage">/printpaper.jsp</result>
+			<result name="toShouldPrintAnswer">/printpaperanswer.jsp</result>
+			<result name="toRebackMyAllNewAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PaperAction_getMyAllPaper</param>
+			</result>
+			<result name="toShouldPrintPageok">/printpapere.jsp</result>
+			<result name="toMyShouldCheckPaperAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">AdminAction_toGetMyUserPaper</param>
+			</result>
+		</action>
+	<!-- 试卷页面Action -->
+		<action name="PageAction_*" method="{1}" class="pageAction">
+			<result name="toAddPaperPage" type="redirect">/addpaper.jsp</result>
+			<result name="toAddPageAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PageAction_doFlushPageSession</param>
+			</result>
+		</action>
+		
+		<!-- 问题Action -->
+		<action name="QuestionsAction_*" method="{1}" class="questionsAction">
+			<result name="addsimplepage">/addsimplechoose.jsp</result>
+			<result name="addmulitypage">/addmulitychoose.jsp</result>
+			<result name="addblanksimpleanswertotalpage">/addblanksimpleanswertotal.jsp</result>
+			<result name="addjudgepage">/addjudge.jsp</result>
+			<result name="toAddPageAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">PageAction_doFlushPageSession</param>
+			</result>
+		</action>
+	</package>
+</struts>
