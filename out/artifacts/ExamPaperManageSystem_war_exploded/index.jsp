@@ -108,7 +108,7 @@ $(document).ready(function() {
 <body>
 <div class="big" style="background-image: url('image/backimg.jpg');height: 585px;width: 1300px"></div>
 <div class="grap"></div>
-<div class="words"><span>安徽工程大学</span>试卷管理系统</div>
+<div class="words"><span>高校</span>试卷管理系统</div>
 <div class="titleword">用户登陆</div>
 <div class="adminpos"><a href="adminlogin.jsp" class="btn btn-success btn-lg"  style="border-radius:20px;">管理员登陆</a></div>
 	<div class="container">

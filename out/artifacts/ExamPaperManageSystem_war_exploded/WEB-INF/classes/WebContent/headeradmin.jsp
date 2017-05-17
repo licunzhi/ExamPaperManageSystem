@@ -71,7 +71,7 @@ $(function(){
 <title>所有的导航栏的上标题</title>
 </head>
 <body>
-<div class="worddd btn btn-info"><span><a href="adminindex.jsp" style="color:white;">试卷管理系统后台系统</a></span></div>
+<div class="worddd btn btn-info"><span><a href="adminindex.jsp" style="color:white;">高校试卷管理系统后台</a></span></div>
 <div class="containername">
 		<div class="btn-group">
 			<a href="AdminAction_toGetMyUserPaper" class="btn btn-primary" role="button" style="border-radius:20px;">待审核</a>

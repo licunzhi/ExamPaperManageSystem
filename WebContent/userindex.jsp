@@ -14,20 +14,20 @@
     <script type="text/javascript" src="bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
 <title>用户菜单主界面</title>
 <style type="text/css">
-	font{
-		color: red;
+	p {
+		color: blue;
 	}
 </style>
 </head>
 <body>
 	<s:include value="header.jsp"/><br><br><br><br>
 	<div class="container">
-		<h1><font>使用指南</font></h1>
-		<h4><font>主页面</font></h4>
+		<h1><p>使用指南</p></h1>
+		<h4><p>主页面</p></h4>
 		<img alt="使用指南" src="image/guider.png" style="width: 1000px">
-		<h4><font>新建试卷页面</font></h4>
+		<h4><p>新建试卷页面</p></h4>
 		<img alt="使用指南" src="image/temp.png" style="width: 1000px">
-		<h4><font>我的试卷页面</font></h4>
+		<h4><p>我的试卷页面</p></h4>
 		<img alt="使用指南" src="image/mypaper.png" style="width: 1000px">
 		
 	</div>

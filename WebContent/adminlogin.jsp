@@ -95,6 +95,13 @@
 		font-weight:bold;
 		font-family: "华文仿宋";
 	}
+	.userlogin{
+		top:12px;
+		left:1164px;
+		position:absolute;
+		font-size: 20px;
+		font-weight:bold;
+	}
 	.adminpos{
 		top:17px;
 		left:1177px;
@@ -106,7 +113,8 @@
 <body>
 <div class="big" style="background-image: url('image/backimg1.jpg');height: 585px;width: 1300px"></div>
 <div class="grap"></div>
-<div class="words"><span>安徽工程大学</span>试卷管理系统管理员登陆界面</div>
+<div class="words">高校试卷管理系统管理员登陆界面</div>
+<div class="userlogin btn btn-primary" onclick="location='UserAction_toUserLogin'">用户登录</div>
 <div class="titleword">管理员登陆</div>
 	<div class="container">
 	<br><br>

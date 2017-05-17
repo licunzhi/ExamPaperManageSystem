@@ -14,12 +14,18 @@
     <script type="text/javascript" src="bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
 <title>管理员菜单主界面</title>
 </head>
+<
+<style>
+    p{
+        color:blue;
+    }
+</style>
 <body>
 	<s:include value="headeradmin.jsp"></s:include>
     <div class="container">
      <br><br><br><br><br><br>
      <hr>
-     <h1><font>使用指南</font></h1>
+        <h1><p>使用指南</p></h1>
      <img alt="使用指南" src="image/adminguide.png" style="width: 1000px">
     </div>
 </body>
