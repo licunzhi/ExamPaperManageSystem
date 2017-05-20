@@ -6,7 +6,7 @@
 <!-- 引入相关的脚本工具 -->
    <link rel="stylesheet" href="bootstrapvalidator-master/vendor/bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="bootstrapvalidator-master/dist/css/bootstrapValidator.css"/>
-
+	<link rel="shortcut icon" href="image/ahpu.ico" type="image/x-icon" />
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
@@ -88,7 +88,7 @@ a{
 <title>所有的导航栏的上标题</title>
 </head>
 <body>
-<div class="words btn"><span>安徽工程大学试卷管理系统</span></div>
+<div class="words btn"><span>高校试卷管理系统</span></div>
 <div class="containername">
 	<div class="index">
 		<a href="userindex.jsp"><img style="width: 50px;height: 50px;" alt="主页" src="image/index.jpg" title="主页" ></a>

@@ -5,11 +5,10 @@ import com.licunzhi.model.Questions;
 
 /**
  * 创建问题仓库
- * @author LiCunzhi
  *
+ * @author LiCunzhi
  */
 @Repository("questionsDao")
-public class QuestionsDaoImpl extends BaseDaoImpl<Questions>
-{
+public class QuestionsDaoImpl extends BaseDaoImpl<Questions> {
 
 }

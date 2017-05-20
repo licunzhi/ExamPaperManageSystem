@@ -6,8 +6,8 @@ import com.licunzhi.model.Admin;
 
 /**
  * 创建管理员dao 实现对用户信息的修改
- * @author LiCunzhi
  *
+ * @author LiCunzhi
  */
 @Repository("adminDao")
 public class AdminDaoImpl extends BaseDaoImpl<Admin> {

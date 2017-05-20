@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2017-2-25 20:14:25 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="com.licunzhi.model.Paper" table="PAPER">
         <id name="id" type="java.lang.Integer">
-            <column name="ID" />
-            <generator class="identity" />
+            <column name="ID"/>
+            <generator class="identity"/>
         </id>
         <property name="title" type="java.lang.String">
-            <column name="TITLE" />
+            <column name="TITLE"/>
         </property>
         <property name="date" type="java.util.Date">
-            <column name="DATE" />
+            <column name="DATE"/>
         </property>
-         <property name="status" type="java.lang.Integer">
-            <column name="STATUS" />
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS"/>
         </property>
         <many-to-one name="user" class="com.licunzhi.model.User" lazy="false">
-            <column name="USER" />
+            <column name="USER"/>
         </many-to-one>
     </class>
 </hibernate-mapping>

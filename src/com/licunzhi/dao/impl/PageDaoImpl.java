@@ -4,9 +4,9 @@ import org.springframework.stereotype.Repository;
 import com.licunzhi.model.Page;
 
 /**
- * 创建页面dao 
- * @author LiCunzhi
+ * 创建页面dao
  *
+ * @author LiCunzhi
  */
 @Repository("pageDao")
 public class PageDaoImpl extends BaseDaoImpl<Page> {
