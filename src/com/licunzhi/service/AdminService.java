@@ -7,6 +7,6 @@ import com.licunzhi.model.Admin;
  */
 public interface AdminService extends BaseService<Admin> {
 
-	public Admin validateUser(String nameid, String password);
+    public Admin validateUser(String nameid, String password);
 
 }

@@ -15,8 +15,8 @@ public abstract class BaseAction<T> extends ActionSupport implements
 	private static final long serialVersionUID = 9180917383072055589L;
 
 	public T model ;
-	
-	public BaseAction(){
+
+	public BaseAction() {
 		try {
 			ParameterizedType type = (ParameterizedType) this.getClass().getGenericSuperclass();
 			Class clazz = (Class) type.getActualTypeArguments()[0];
@@ -29,7 +29,7 @@ public abstract class BaseAction<T> extends ActionSupport implements
 	public void prepare() throws Exception {
 	}
 
-	public T getModel(){
-		return model ;
+	public T getModel() {
+		return model;
 	}
 }

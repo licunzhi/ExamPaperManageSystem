@@ -20,18 +20,18 @@ import com.licunzhi.service.PaperService;
 public class PageAction extends BaseAction<Page> implements SessionAware{
 
 	private static final long serialVersionUID = 1L;
-	
-	@Resource(name="paperService")
+
+	@Resource(name = "paperService")
 	private PaperService paperService;
-	
+
 	private HttpServletRequest request = ServletActionContext.getRequest();
-	
-	private Map<String,Object> session ;
+
+	private Map<String, Object> session;
 	
 	/*
 	 * 创建一个新的页面
 	 * */
-	public String toNewPage(){
+	public String toNewPage() {
 		//保存创建的页面
 		Paper paper = (Paper) session.get("paper");
 		model.setPaper(paper);
@@ -46,7 +46,7 @@ public class PageAction extends BaseAction<Page> implements SessionAware{
 	/**
 	 * 删除指定添加的页面
 	 */
-	public String doDeletePage(){
+	public String doDeletePage() {
 		Integer id = Integer.valueOf((request.getParameter("id")));
 		paperService.deletePageEntity(id);
 		return "toAddPageAction";
@@ -57,7 +57,7 @@ public class PageAction extends BaseAction<Page> implements SessionAware{
 	 * 
 	 * 作为跳转还需要查询出相应的页面之中包含的题目的信息
 	 */
-	public String doFlushPageSession(){
+	public String doFlushPageSession() {
 		//保存创建的页面
 		Paper paper = (Paper) session.get("paper");
 		Integer paperid = paper.getId();
@@ -65,18 +65,18 @@ public class PageAction extends BaseAction<Page> implements SessionAware{
 		List<Page> pagelist = paperService.getPaperWithAllChild(paperid);
 		System.out.println(pagelist);
 		session.put("pagelist", pagelist);
-		
+
 		//根据page的集合的方式查询出每一个需要显示问题集合
 		List<Questions> questionlist = paperService.getQuestionsByPagelist(pagelist);
 		System.out.println(questionlist);
 		session.put("questionlist", questionlist);
-		
+
 		return "toAddPaperPage";
 	}
 
 	
 	@Override
 	public void setSession(Map<String, Object> session) {
-		this.session= session;
+		this.session = session;
 	}
 }

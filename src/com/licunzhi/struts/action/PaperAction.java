@@ -29,7 +29,6 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 	@Resource(name="paperService")
 	private PaperService paperService;
 	
-	
 	private Map<String,Object> session ;
 	
 	/**
@@ -39,12 +38,11 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 	 * 原因是读取和写操作并不适合同时在一个代码段中
 	 * @return
 	 */
-	public String toNewPaper(){
+	public String toNewPaper() {
 		//净化session
 		session.remove("pagelist");
 		session.remove("questionlist");
 		session.remove("paper");
-		
 		Date date = new Date();
 		model.setDate(date);
 		model.setStatus(1);
@@ -54,13 +52,11 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 		//之后保存相应的实体类就行了
 		Integer id = model.getId();
 		System.out.println(id);
-		if(id != null){
+		if (id != null) {
 			paperService.updateEntity(model);
-		}else{
+		} else {
 			paperService.saveEntity(model);
 		}
-		
-//		System.out.println(model);
 		return "toAddPaperPage";
 	}
 	
@@ -128,7 +124,6 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 	}
 	/**
 	 * 查找所有属于我的草稿纸
-	 * @param session
 	 */
 	public String getTempAllPaper(){
 		User user = (User) session.get("user");
@@ -138,7 +133,6 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 	}
 	/**
 	 * 查看垃圾箱的相关试卷
-	 * @param session
 	 */
 	public String getTrashAllPaper(){
 		User user = (User) session.get("user");
@@ -148,7 +142,6 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 	}
 	/**
 	 * 设置试卷的状态重新出现在草稿箱中
-	 * @param session
 	 */
 	public String toRebackTemp(){
 		String pid = request.getParameter("id");
@@ -160,7 +153,6 @@ public class PaperAction extends BaseAction<Paper> implements SessionAware,Actio
 	}
 	/**
 	 * 从垃圾像中删除
-	 * @param session
 	 */
 	public String toRemoveTrash(){
 		String pid = request.getParameter("id");
